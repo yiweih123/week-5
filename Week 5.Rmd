@@ -1,0 +1,26 @@
+---
+title: "Week 5"
+author: "Yiwei Huang"
+date: '2023'
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+# Reading the data into R
+
+```{r, echo = TRUE}
+df <- read.csv('~/Downloads/realest.csv')
+```
+
+# Histogram of House Prices
+```{r, echo = TRUE}
+# Plot a histogram of house prices
+hist(df$`Price`, breaks = 10, col = "skyblue", main = "Distribution of House Prices", xlab = "House Price")
+```
+````{r, echo = TRUE}
+# Plot a scatterplot of house price and space
+plot(df$`Space`, df$`Price`, pch = 16, col = "darkblue", main = "House Price vs. Space", xlab = "Space", ylab = "House Price")
+```
+
